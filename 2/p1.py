@@ -16,9 +16,12 @@ def remove(file_name, new_file):
 	with open(file_name, 'r') as file:
 		lines = file.readlines()
 		for i, line in enumerate(lines):
-			lines[i] = line[line.index(':') + 1:].strip()
+			lines[i] = line[line.index(':') +1 :].strip()
+			lines[i] = lines[i].replace(',', '')
+			lines[i] = lines[i].replace(';', '')
 	with open(new_file, 'w') as file:
 		file.write('\n'.join(lines)) 
+
 
 def sum_up(file_name):
 	sum=0
