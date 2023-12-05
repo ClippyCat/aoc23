@@ -1,5 +1,5 @@
 import re
-file_name = 't.txt'
+file_name = 'p.txt'
 new_file = 'new.txt'
 
 def remove(file_name, new_file):
