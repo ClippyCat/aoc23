@@ -11,13 +11,12 @@ time = p[:mid]
 
 def far(b, r):
 	return (r-b)*b
+
 total=1
 for i, t in enumerate(time):
-#	print(t)
 	c=0
 	for b in range(1, t+1):
 		res=far(b, time[i])
 		c+=res > dist[i]
-#	print(c)
 	total*=c
 print(total)
