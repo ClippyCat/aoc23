@@ -8,9 +8,9 @@ def dif(line):
 	for i, l in enumerate(line[1:], start=1):
 		diff = l-line[i-1]
 		temp.append(diff)
-	return line[-1]+dif(temp) if diff != 0 else line[-1]
+	return line[-1]+dif(temp) if any(x!=0 for x in temp) else line[-1]
 
 total=0
 for i, line in enumerate(lines):
-	total+=dif(line)
+	total+=dif(lines[i])
 print(total)
